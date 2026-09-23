@@ -36,6 +36,22 @@ if (motion) {
   });
 }
 
+const caButton = document.getElementById("ca-copy");
+if (caButton) {
+  const label = caButton.querySelector(".ca-label");
+  caButton.addEventListener("click", async () => {
+    try {
+      await navigator.clipboard.writeText(caButton.dataset.ca);
+      label.textContent = "Copied";
+    } catch (error) {
+      label.textContent = "CA";
+    }
+    window.setTimeout(() => {
+      label.textContent = "CA";
+    }, 1400);
+  });
+}
+
 const canvas = document.getElementById("specks");
 const context = canvas.getContext("2d");
 

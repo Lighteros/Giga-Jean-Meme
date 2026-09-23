@@ -336,6 +336,43 @@ h1 span {
   animation: rise 1s 0.28s ease both;
 }
 
+.ca-copy {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(100%, 34rem);
+  margin: 18px 0 0;
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--silver);
+  font-family: var(--body);
+  text-align: left;
+  cursor: pointer;
+  animation: rise 1s 0.34s ease both;
+}
+
+.ca-copy code {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: var(--body);
+  font-size: 0.86rem;
+}
+
+.ca-label {
+  flex: none;
+  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--paper);
+}
+
+.ca-copy:hover {
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
